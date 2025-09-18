@@ -30,12 +30,14 @@ export default function PostDetail() {
       <S.Title>{post.title}</S.Title>
       <S.Divider />
       <S.Article>{post.content}</S.Article>
-      <button onClick={() => deletePost(id)} type="button">
-        삭제
-      </button>
-      <button onClick={() => editPost()} type="button">
-        수정
-      </button>
+      <S.Buttons>
+        <S.Button onClick={() => deletePost(id)} type="button">
+          삭제
+        </S.Button>
+        <S.Button onClick={() => editPost()} type="button">
+          수정
+        </S.Button>
+      </S.Buttons>
     </>
   );
 }

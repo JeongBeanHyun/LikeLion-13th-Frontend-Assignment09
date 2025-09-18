@@ -21,6 +21,10 @@ export default function PostDetail() {
     navigate(`/`);
   };
 
+  const editPost = () => {
+    navigate(`/edit/${id}`);
+  };
+
   return (
     <>
       <S.Title>{post.title}</S.Title>
@@ -28,6 +32,9 @@ export default function PostDetail() {
       <S.Article>{post.content}</S.Article>
       <button onClick={() => deletePost(id)} type="button">
         삭제
+      </button>
+      <button onClick={() => editPost()} type="button">
+        수정
       </button>
     </>
   );

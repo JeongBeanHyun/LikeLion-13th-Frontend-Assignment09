@@ -24,6 +24,7 @@ export default function Router() {
         <Route path="/" element={<PostList />} />
         <Route path="/posts/:id" element={<PostDetail />} />
         <Route path="/write" element={<PostWrite />} />
+        <Route path="/edit/:id" element={<PostWrite />} />
       </Route>
     </Routes>
   );
